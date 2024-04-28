@@ -25,7 +25,7 @@ export let setHistorical = (inHistorical: boolean) => {};
 function handleUrlCommands(command?: string) {
 	if (command === "resetAll") {
 		localStorage.clear();
-		window.location.href = "/ffxiv-blm-rotation";
+		window.location.href = "/ffxiv-rdm-rotation";
 	}
 	else if (command === "resetResourceOverrides") {
 		let strOld = localStorage.getItem("gameRecord");
@@ -42,7 +42,7 @@ function handleUrlCommands(command?: string) {
 				localStorage.setItem("gameRecord" + i.toString(), JSON.stringify(content));
 			}
 		}
-		window.location.href = "/ffxiv-blm-rotation";
+		window.location.href = "/ffxiv-rdm-rotation";
 	}
 	else if (command !== undefined) {
 		console.log("unrecognized command '" + command + "'");
@@ -258,7 +258,7 @@ export default class Main extends React.Component {
 						<SelectLanguage/>
 						<SelectColorTheme/>
 						<div>
-							<h3 style={{marginTop: 20, marginBottom: 6}}>Black Mage in the Shell</h3>
+							<h3 style={{marginTop: 20, marginBottom: 6}}>Red Mage in the Shell</h3>
 							{localize({
 								en: <div style={{marginBottom: 16}}>Last updated: {changelog[0].date} (see <b>About this
 									tool/Changelog</b>) (see my <a href={"https://coda.io/d/_d-N3WFoMZ8e/Black-Mage-in-the-Shell_suRLF"}>roadmap</a>)
